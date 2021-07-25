@@ -1,5 +1,8 @@
 :root {
     --main-text-color: #000;
+    --secondary-link-color: #0050B2;
+    --white-color: #fff;
+    --fotogallery-bg-color: rgba(63, 169, 245, 0.07);
 }
 
 ul {
@@ -58,8 +61,8 @@ body {
 .categories-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -32px;
-    margin-left: -32px;
+    margin-right: -32px;
+    margin-bottom: -32px;
     padding-top: 48px;
     padding-bottom: 64px;
 }
@@ -91,7 +94,7 @@ body {
     padding-top: 44px;
     padding-bottom: 80px;
 
-    background: rgba(63, 169, 245, 0.07);
+    background: var(--fotogallery-bg-color);
 }
 
 .fotogallery-title {
@@ -104,7 +107,7 @@ body {
     font-size: 16px;
     line-height: 1.19;
 
-    color: #0050B2;
+    color: var(--secondary-link-color);
 
     text-decoration-line: underline;
 }
@@ -131,7 +134,7 @@ body {
     height: 44px;
     border-radius: 50%;
 
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 .fotogallery-btn-item:not(:last-child) {
