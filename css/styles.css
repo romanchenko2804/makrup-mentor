@@ -60,6 +60,8 @@ body {
     flex-wrap: wrap;
     margin-top: -32px;
     margin-left: -32px;
+    padding-top: 48px;
+    padding-bottom: 64px;
 }
 
 .categories-list-items {
