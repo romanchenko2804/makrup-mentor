@@ -17,27 +17,33 @@
 
   <body>
     <!-- шапка сайта -->
-    <header>
-      <a href="/">
-        <img src="./images/logo.png" alt="logo" width="54" height="54" />
-        Байкальский отдых Турагентство
-      </a>
-      <ul>
-        <li><a href="tel:89243541540">8-924-3-541-540</a></li>
-        <li>
-          <a href="mailto:baikalholiday@mail.ru">baikalholiday@mail.ru</a>
-        </li>
-      </ul>
-      <button type="button">Обратный звонок</button>
-      <nav>
-        <ul>
-          <li><a href="/">Бронирование</a></li>
-          <li><a href="/">Экскурсии</a></li>
-          <li><a href="/">Туры на Байкал</a></li>
-          <li><a href="/">О Байкале</a></li>
-          <li><a href="/">О нас</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <a href="/" class="header-logo">
+            <img src="./images/logo.png" alt="logo" width="54" height="54" />
+            <p class="header-text"><span class="header-accent-text">Байкальский отдых</span> Турагентство</p>
+          </a>
+          <div class="header-wraper">
+            <ul class="header-contact">
+              <li><a class="header-phone" href="tel:89243541540">8-924-3-541-540</a></li>
+              <li>
+                <a href="mailto:baikalholiday@mail.ru">baikalholiday@mail.ru</a>
+              </li>
+            </ul>
+            <button type="button" class="header-call-btn">Обратный звонок</button>
+          </div>
+        </div>
+        <nav class="header-nav">
+          <ul class="header-nav-lists">
+            <li><a href="/">Бронирование</a></li>
+            <li><a href="/">Экскурсии</a></li>
+            <li><a href="/">Туры на Байкал</a></li>
+            <li><a href="/">О Байкале</a></li>
+            <li><a href="/">О нас</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- основной контент -->
