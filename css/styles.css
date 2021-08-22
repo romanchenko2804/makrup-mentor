@@ -2,6 +2,9 @@
     --main-text-color: #000;
     --secondary-link-color: #0050B2;
     --white-color: #fff;
+    --secondary-text-color: #333333;
+    --footer-bg-color: #202020;
+
     --fotogallery-bg-color: rgba(63, 169, 245, 0.07);
     --main-font-family: 'Roboto', sans-serif;
     --secondary-font-familt: 'PT Serif', serif;
@@ -21,7 +24,7 @@ img {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -210,6 +213,198 @@ body {
     color: #333333;
 }
 
+/* Популярные предложения */
+.offer {
+    padding-right: 76px;
+    padding-bottom: 80px;
+}
+
+.offer .container {
+    position: relative;
+}
+
+.offer-title {
+    margin-bottom: 40px;
+    font-family: var(--secondary-font-familt);
+    font-size: 30px;
+    line-height: 1.34;
+
+    color: var(--main-text-color);
+}
+
+.offer-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.offer-card {
+    /* margin-right: 32px;
+    margin-bottom: 32px;
+    width: 256px;
+    height: 256px; */
+    
+}
+
+.offer-card:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.offer-link {
+    position: relative;
+    display: inline-block;
+
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.offer-link:hover,
+.offer-link:focus,
+.offer-all-offers:hover,
+.offer-all-offers:focus {
+    transform: scale(1.05);
+    transition: transfotm 250ms linear;
+}
+
+.offer-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#000000 0%,#FFFFFF 48.44%,#FFFFFF 76.04%,#000000 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+    border-radius: 6px;
+}
+
+.offer-card-img {
+
+}
+
+.offer-card-title {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 20px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+}
+
+.offer-card-price {
+    position: absolute;
+    bottom: 18px;
+    left: 16px;
+    right: 20px;
+
+    font-size: 16px;
+    line-height: 1.3;
+
+    color: #FFFFFF;
+}
+
+.offer-all-offers {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 3px;
+    right: 15px;
+    width: 256px;
+    height: 256px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+
+    color: var(--white-color);
+
+    background-image: url(../images/bereg.jpg);
+}
+
+.offer-all-offers-text {
+    display: block;
+    text-align: center;
+}
+
+
+/* О Байкале */
+
+.about {
+    
+    /* position: relative; */
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.about .container {
+    display: flex;
+}
+
+.about-block {
+    width: 448px;
+    margin-right: 32px;
+}
+
+.about-title {
+    font-family: var(--secondary-font-familt);
+    font-size: 30px;
+    line-height: 1.34;
+
+    color: var(--main-text-color);
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.4;
+
+    color: var(--secondary-text-color);
+}
+
+.about-label {
+    font-size: 16px;
+    line-height: 1.85;
+    
+    text-decoration-line: underline;
+
+    color: #76767A;
+}
+
+.about-text.checked {
+    display: none;
+}
+
+.about-check:checked+.about-text.checked {
+    display: block;
+}
+
+.about-check:checked~.about-label .read-more  {
+    display: none;
+}
+
+.about-check:checked~.about-label .read-less {
+    display: block;
+}
+
+.read-less {
+    display: none;
+}
+
+.about-video {
+    /* position: absolute; */
+    width: 640px;
+    height: 380px;
+
+    background: #000000;
+    
+}
+
+
 /* fotogallery */
 
 .fotogallery {
@@ -330,5 +525,93 @@ body {
         border-style: dashed;
     }
 }
+
+/* FOOTER */
+
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 45px;
+
+    background-color: var(--footer-bg-color);
+}
+
+/* верхний блок */
+
+.footer-top {
+    display: flex;
+
+    padding-bottom: 30px;
+
+    /* opacity: 0.2; */
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.footer-top-box:not(:last-child) {
+    margin-right: 76px;
+}
+
+.footer-top-title {
+    padding-bottom: 17px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.85;
+
+    text-transform: uppercase;
+
+    color: var(--white-color);
+}
+
+.footer-top-link {
+    font-size: 16px;
+    line-height: 1.3;
+
+    color: var(--white-color);
+
+    opacity: 0.8;
+}
+
+.footer-top-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* нижний блок */
+
+.footer-down {
+    display: flex;
+    /* justify-content: space-between; */
+
+    padding-top: 32px;
+}
+
+/* .footer-down-box:not(:last-child) {
+    margin-right: 40px;
+} */
+
+.footer-down-text,
+.footer-down-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+
+    color: var(--white-color);
+}
+
+.footer-down-subtext  {
+    font-size: 14px;
+    line-height: 1.3;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+
+.footer-down-address {
+    display: flex;
+}
+
+
+
 
 
